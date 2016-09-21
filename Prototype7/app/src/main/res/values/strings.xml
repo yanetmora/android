@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Prototype</string>
+    <string name="clonar">Clonar</string>
+    <string name="compra">Teclea fecha de compra</string>
+    <string name="nombre">Teclea nombre</string>
+    <string name="precio">Teclea el precio del libro</string>
+</resources>
