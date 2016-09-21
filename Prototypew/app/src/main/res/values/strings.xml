@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Prototype</string>
+    <string name="clonar">Clonar</string>
+
+    <string name="fecha">Teclea fecha </string>
+
+    <string name="apellido">Teclea apellido</string>
+
+    <string name="numero">Teclea el numero de cheque</string>
+
+    <string name="nombre">Teclea el nombre</string>
+</resources>
+
