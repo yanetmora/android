@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://ws.utng.edu.mx" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="http://ws.utng.edu.mx" xmlns:intf="http://ws.utng.edu.mx" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<!--WSDL created by Apache Axis version: 1.4
+Built on Apr 22, 2006 (06:55:48 PDT)-->
+ <wsdl:types>
+  <schema elementFormDefault="qualified" targetNamespace="http://ws.utng.edu.mx" xmlns="http://www.w3.org/2001/XMLSchema">
+   <element name="getUserPortalById">
+    <complexType>
+     <sequence>
+      <element name="id" type="xsd:int"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getUserPortalByIdResponse">
+    <complexType>
+     <sequence>
+      <element name="getUserPortalByIdReturn" type="impl:UserPortal"/>
+     </sequence>
+    </complexType>
+   </element>
+   <complexType name="UserPortal">
+    <sequence>
+     <element name="autorised" nillable="true" type="xsd:string"/>
+     <element name="createDate" nillable="true" type="xsd:string"/>
+     <element name="id" type="xsd:int"/>
+     <element name="isdeleted" nillable="true" type="xsd:string"/>
+     <element name="portal" nillable="true" type="xsd:string"/>
+     <element name="refreshRoles" nillable="true" type="xsd:string"/>
+     <element name="userPortall" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <element name="addUserPortal">
+    <complexType>
+     <sequence>
+      <element name="userPortal" type="impl:UserPortal"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="addUserPortalResponse">
+    <complexType>
+     <sequence>
+      <element name="addUserPortalReturn" type="xsd:int"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getUserPortals">
+    <complexType/>
+   </element>
+   <element name="getUserPortalsResponse">
+    <complexType>
+     <sequence>
+      <element maxOccurs="unbounded" name="getUserPortalsReturn" type="impl:UserPortal"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="updateUserPortal">
+    <complexType>
+     <sequence>
+      <element name="userPortal" type="impl:UserPortal"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="updateUserPortalResponse">
+    <complexType>
+     <sequence>
+      <element name="updateUserPortalReturn" type="xsd:int"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="removeUserPortal">
+    <complexType>
+     <sequence>
+      <element name="id" type="xsd:int"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="removeUserPortalResponse">
+    <complexType>
+     <sequence>
+      <element name="removeUserPortalReturn" type="xsd:int"/>
+     </sequence>
+    </complexType>
+   </element>
+  </schema>
+ </wsdl:types>
+
+   <wsdl:message name="updateUserPortalRequest">
+
+      <wsdl:part element="impl:updateUserPortal" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getUserPortalsResponse">
+
+      <wsdl:part element="impl:getUserPortalsResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="addUserPortalResponse">
+
+      <wsdl:part element="impl:addUserPortalResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getUserPortalByIdRequest">
+
+      <wsdl:part element="impl:getUserPortalById" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="updateUserPortalResponse">
+
+      <wsdl:part element="impl:updateUserPortalResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="removeUserPortalResponse">
+
+      <wsdl:part element="impl:removeUserPortalResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="addUserPortalRequest">
+
+      <wsdl:part element="impl:addUserPortal" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getUserPortalByIdResponse">
+
+      <wsdl:part element="impl:getUserPortalByIdResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="removeUserPortalRequest">
+
+      <wsdl:part element="impl:removeUserPortal" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getUserPortalsRequest">
+
+      <wsdl:part element="impl:getUserPortals" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:portType name="UserPortalWS">
+
+      <wsdl:operation name="getUserPortalById">
+
+         <wsdl:input message="impl:getUserPortalByIdRequest" name="getUserPortalByIdRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getUserPortalByIdResponse" name="getUserPortalByIdResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="addUserPortal">
+
+         <wsdl:input message="impl:addUserPortalRequest" name="addUserPortalRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:addUserPortalResponse" name="addUserPortalResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getUserPortals">
+
+         <wsdl:input message="impl:getUserPortalsRequest" name="getUserPortalsRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getUserPortalsResponse" name="getUserPortalsResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="updateUserPortal">
+
+         <wsdl:input message="impl:updateUserPortalRequest" name="updateUserPortalRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:updateUserPortalResponse" name="updateUserPortalResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="removeUserPortal">
+
+         <wsdl:input message="impl:removeUserPortalRequest" name="removeUserPortalRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:removeUserPortalResponse" name="removeUserPortalResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:portType>
+
+   <wsdl:binding name="UserPortalWSSoapBinding" type="impl:UserPortalWS">
+
+      <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+
+      <wsdl:operation name="getUserPortalById">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getUserPortalByIdRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getUserPortalByIdResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="addUserPortal">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="addUserPortalRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="addUserPortalResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getUserPortals">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getUserPortalsRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getUserPortalsResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="updateUserPortal">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="updateUserPortalRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="updateUserPortalResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="removeUserPortal">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="removeUserPortalRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="removeUserPortalResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:binding>
+
+   <wsdl:service name="UserPortalWSService">
+
+      <wsdl:port binding="impl:UserPortalWSSoapBinding" name="UserPortalWS">
+
+         <wsdlsoap:address location="http://localhost:8080/WSUserPortal/services/UserPortalWS"/>
+
+      </wsdl:port>
+
+   </wsdl:service>
+
+</wsdl:definitions>
