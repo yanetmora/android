@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">WSUserPortal</string>
+
+
+
+
+    <string name="portal">Portal</string>
+    <string name="userPortall">user Portall</string>
+    <string name="createDate">Create Date</string>
+    <string name="autorised">Autorised</string>
+    <string name="isdeleted">isdeleted</string>
+    <string name="refreshRoles">Refresh Roles</string>
+
+    <string name="save">save</string>
+    <string name="list">list</string>
+    <string name="modificar">modificar</string>
+    <string name="eliminar">eliminar</string>
+    <string name="attion_settings">action_settings</string>
+    <string name="regresar">regresar</string>
+    <string name="userportall">userPortall</string>
+    <string name="createdate">createDate</string>
+
+</resources>
