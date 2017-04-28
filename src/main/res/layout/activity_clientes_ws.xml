@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ClientesWS">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/et_apellido"
+                android:inputType="text"
+                android:hint="@string/apellidos"
+                />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/et_nombre"
+                android:inputType="text"
+                android:hint="Nombre"
+                />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/et_nombre_completo"
+                android:inputType="text"
+                android:hint="@string/nombre_completo"
+
+                />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/et_correo_electronico"
+                android:inputType="text"
+                android:hint="@string/direccion_de_correo_eletronico"
+
+                />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/et_compania"
+                android:inputType="text"
+                android:hint="@string/compa_ia"
+                />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/et_cargo"
+                android:inputType="text"
+                android:hint="@string/cargo"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/et_tel_trab"
+                android:inputType="text"
+                android:hint="@string/telefono_trabajo"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/et_tel_part"
+                android:inputType="text"
+                android:hint="@string/telefono_particular"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/et_tel_mov"
+                android:inputType="text"
+                android:hint="@string/telefono_movil"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/et_num_fax"
+                android:inputType="text"
+                android:hint="@string/numero_fax"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/et_direccion"
+                android:inputType="text"
+                android:hint="@string/direccion"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/et_ciudad"
+                android:inputType="text"
+                android:hint="@string/ciudad"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/et_estado"
+                android:inputType="text"
+                android:hint="@string/estado"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/et_codigo_postal"
+                android:inputType="text"
+                android:hint="@string/codigo_postal"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+                <Button
+                    android:layout_margin="@dimen/margin_button"
+                    android:layout_width="@dimen/whidth_button"
+                    android:layout_height="wrap_content"
+                    android:text="@string/guardar"
+                    android:id="@+id/bt_save"
+                    android:background="@color/colorAccent"
+                    android:textColor="#fff"
+                    />
+                <Button
+                    android:layout_margin="@dimen/margin_button"
+                    android:layout_width="@dimen/whidth_button"
+                    android:layout_height="wrap_content"
+                    android:text="@string/listar"
+                    android:id="@+id/bt_list"
+                    android:background="@color/colorAccent"
+                    android:textColor="#fff"
+                    />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+
+</LinearLayout>
