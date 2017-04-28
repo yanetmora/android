@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://ws.utng.edu.mx" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="http://ws.utng.edu.mx" xmlns:intf="http://ws.utng.edu.mx" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<!--WSDL created by Apache Axis version: 1.4
+Built on Apr 22, 2006 (06:55:48 PDT)-->
+ <wsdl:types>
+  <schema elementFormDefault="qualified" targetNamespace="http://ws.utng.edu.mx" xmlns="http://www.w3.org/2001/XMLSchema">
+   <element name="addCliente">
+    <complexType>
+     <sequence>
+      <element name="cliente" type="impl:Cliente"/>
+     </sequence>
+    </complexType>
+   </element>
+   <complexType name="Cliente">
+    <sequence>
+     <element name="apellidos" nillable="true" type="xsd:string"/>
+     <element name="cargo" nillable="true" type="xsd:string"/>
+     <element name="ciudad" nillable="true" type="xsd:string"/>
+     <element name="codigoPostal" nillable="true" type="xsd:string"/>
+     <element name="compania" nillable="true" type="xsd:string"/>
+     <element name="correoElectronico" nillable="true" type="xsd:string"/>
+     <element name="direccion" nillable="true" type="xsd:string"/>
+     <element name="estado" nillable="true" type="xsd:string"/>
+     <element name="id" type="xsd:int"/>
+     <element name="nombre" nillable="true" type="xsd:string"/>
+     <element name="nombreCompleto" nillable="true" type="xsd:string"/>
+     <element name="numeroFax" nillable="true" type="xsd:string"/>
+     <element name="telefonoMovil" nillable="true" type="xsd:string"/>
+     <element name="telefonoParticular" nillable="true" type="xsd:string"/>
+     <element name="telefonoTrabajo" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <element name="addClienteResponse">
+    <complexType>
+     <sequence>
+      <element name="addClienteReturn" type="xsd:int"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="updateCliente">
+    <complexType>
+     <sequence>
+      <element name="cliente" type="impl:Cliente"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="updateClienteResponse">
+    <complexType>
+     <sequence>
+      <element name="updateClienteReturn" type="xsd:int"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getClientes">
+    <complexType/>
+   </element>
+   <element name="getClientesResponse">
+    <complexType>
+     <sequence>
+      <element maxOccurs="unbounded" name="getClientesReturn" type="impl:Cliente"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="removeCliente">
+    <complexType>
+     <sequence>
+      <element name="id" type="xsd:int"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="removeClienteResponse">
+    <complexType>
+     <sequence>
+      <element name="removeClienteReturn" type="xsd:int"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getClientesById">
+    <complexType>
+     <sequence>
+      <element name="id" type="xsd:int"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getClientesByIdResponse">
+    <complexType>
+     <sequence>
+      <element name="getClientesByIdReturn" type="impl:Cliente"/>
+     </sequence>
+    </complexType>
+   </element>
+  </schema>
+ </wsdl:types>
+
+   <wsdl:message name="addClienteRequest">
+
+      <wsdl:part element="impl:addCliente" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="addClienteResponse">
+
+      <wsdl:part element="impl:addClienteResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="updateClienteRequest">
+
+      <wsdl:part element="impl:updateCliente" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getClientesByIdRequest">
+
+      <wsdl:part element="impl:getClientesById" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getClientesByIdResponse">
+
+      <wsdl:part element="impl:getClientesByIdResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getClientesResponse">
+
+      <wsdl:part element="impl:getClientesResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getClientesRequest">
+
+      <wsdl:part element="impl:getClientes" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="removeClienteResponse">
+
+      <wsdl:part element="impl:removeClienteResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="updateClienteResponse">
+
+      <wsdl:part element="impl:updateClienteResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="removeClienteRequest">
+
+      <wsdl:part element="impl:removeCliente" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:portType name="ClienteWS">
+
+      <wsdl:operation name="addCliente">
+
+         <wsdl:input message="impl:addClienteRequest" name="addClienteRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:addClienteResponse" name="addClienteResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="updateCliente">
+
+         <wsdl:input message="impl:updateClienteRequest" name="updateClienteRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:updateClienteResponse" name="updateClienteResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getClientes">
+
+         <wsdl:input message="impl:getClientesRequest" name="getClientesRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getClientesResponse" name="getClientesResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="removeCliente">
+
+         <wsdl:input message="impl:removeClienteRequest" name="removeClienteRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:removeClienteResponse" name="removeClienteResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getClientesById">
+
+         <wsdl:input message="impl:getClientesByIdRequest" name="getClientesByIdRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getClientesByIdResponse" name="getClientesByIdResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:portType>
+
+   <wsdl:binding name="ClienteWSSoapBinding" type="impl:ClienteWS">
+
+      <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+
+      <wsdl:operation name="addCliente">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="addClienteRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="addClienteResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="updateCliente">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="updateClienteRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="updateClienteResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getClientes">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getClientesRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getClientesResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="removeCliente">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="removeClienteRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="removeClienteResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getClientesById">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getClientesByIdRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getClientesByIdResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:binding>
+
+   <wsdl:service name="ClienteWSService">
+
+      <wsdl:port binding="impl:ClienteWSSoapBinding" name="ClienteWS">
+
+         <wsdlsoap:address location="http://localhost:8080/WSClientes/services/ClienteWS"/>
+
+      </wsdl:port>
+
+   </wsdl:service>
+
+</wsdl:definitions>

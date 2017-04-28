@@ -1,0 +1,48 @@
+<!-- Use this file to deploy some handlers/chains and services      -->
+<!-- Two ways to do this:                                           -->
+<!--   java org.apache.axis.client.AdminClient deploy.wsdd          -->
+<!--      after the axis server is running                          -->
+<!-- or                                                             -->
+<!--   java org.apache.axis.utils.Admin client|server deploy.wsdd   -->
+<!--      from the same directory that the Axis engine runs         -->
+
+<deployment
+    xmlns="http://xml.apache.org/axis/wsdd/"
+    xmlns:java="http://xml.apache.org/axis/wsdd/providers/java">
+
+  <!-- Services from ClienteWSService WSDL service -->
+
+  <service name="ClienteWS" provider="java:RPC" style="wrapped" use="literal">
+      <parameter name="wsdlTargetNamespace" value="http://ws.utng.edu.mx"/>
+      <parameter name="wsdlServiceElement" value="ClienteWSService"/>
+      <parameter name="schemaQualified" value="http://ws.utng.edu.mx"/>
+      <parameter name="wsdlServicePort" value="ClienteWS"/>
+      <parameter name="className" value="mx.edu.utng.ws.ClienteWSSoapBindingImpl"/>
+      <parameter name="wsdlPortType" value="ClienteWS"/>
+      <parameter name="typeMappingVersion" value="1.2"/>
+      <operation name="addCliente" qname="operNS:addCliente" xmlns:operNS="http://ws.utng.edu.mx" returnQName="retNS:addClienteReturn" xmlns:retNS="http://ws.utng.edu.mx" returnType="rtns:int" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+        <parameter qname="pns:cliente" xmlns:pns="http://ws.utng.edu.mx" type="tns:Cliente" xmlns:tns="http://ws.utng.edu.mx"/>
+      </operation>
+      <operation name="updateCliente" qname="operNS:updateCliente" xmlns:operNS="http://ws.utng.edu.mx" returnQName="retNS:updateClienteReturn" xmlns:retNS="http://ws.utng.edu.mx" returnType="rtns:int" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+        <parameter qname="pns:cliente" xmlns:pns="http://ws.utng.edu.mx" type="tns:Cliente" xmlns:tns="http://ws.utng.edu.mx"/>
+      </operation>
+      <operation name="getClientes" qname="operNS:getClientes" xmlns:operNS="http://ws.utng.edu.mx" returnQName="retNS:getClientesReturn" xmlns:retNS="http://ws.utng.edu.mx" returnType="rtns:Cliente" xmlns:rtns="http://ws.utng.edu.mx" soapAction="" >
+      </operation>
+      <operation name="removeCliente" qname="operNS:removeCliente" xmlns:operNS="http://ws.utng.edu.mx" returnQName="retNS:removeClienteReturn" xmlns:retNS="http://ws.utng.edu.mx" returnType="rtns:int" xmlns:rtns="http://www.w3.org/2001/XMLSchema" soapAction="" >
+        <parameter qname="pns:id" xmlns:pns="http://ws.utng.edu.mx" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <operation name="getClientesById" qname="operNS:getClientesById" xmlns:operNS="http://ws.utng.edu.mx" returnQName="retNS:getClientesByIdReturn" xmlns:retNS="http://ws.utng.edu.mx" returnType="rtns:Cliente" xmlns:rtns="http://ws.utng.edu.mx" soapAction="" >
+        <parameter qname="pns:id" xmlns:pns="http://ws.utng.edu.mx" type="tns:int" xmlns:tns="http://www.w3.org/2001/XMLSchema"/>
+      </operation>
+      <parameter name="allowedMethods" value="updateCliente getClientes addCliente getClientesById removeCliente"/>
+
+      <typeMapping
+        xmlns:ns="http://ws.utng.edu.mx"
+        qname="ns:Cliente"
+        type="java:mx.edu.utng.ws.Cliente"
+        serializer="org.apache.axis.encoding.ser.BeanSerializerFactory"
+        deserializer="org.apache.axis.encoding.ser.BeanDeserializerFactory"
+        encodingStyle=""
+      />
+  </service>
+</deployment>
