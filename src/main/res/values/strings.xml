@@ -1,23 +1,23 @@
 <resources>
-    <string name="app_name">WSUserPortal</string>
-
-
-
-
-    <string name="portal">Portal</string>
-    <string name="userPortall">user Portall</string>
-    <string name="createDate">Create Date</string>
-    <string name="autorised">Autorised</string>
-    <string name="isdeleted">isdeleted</string>
-    <string name="refreshRoles">Refresh Roles</string>
-
-    <string name="save">save</string>
-    <string name="list">list</string>
-    <string name="modificar">modificar</string>
+    <string name="app_name">ClientesWS</string>
+    <string name="regress">regress</string>
+    <string name="action_settings">action_settings</string>
     <string name="eliminar">eliminar</string>
-    <string name="attion_settings">action_settings</string>
-    <string name="regresar">regresar</string>
-    <string name="userportall">userPortall</string>
-    <string name="createdate">createDate</string>
-
+    <string name="modificar">modificar</string>
+    <string name="item">item</string>
+    <string name="guardar">Guardar</string>
+    <string name="listar">Listar</string>
+    <string name="direccion_de_correo_eletronico">Direccion de Correo Eletronico</string>
+    <string name="nombre_completo">Nombre Completo</string>
+    <string name="compa_ia">Compañia</string>
+    <string name="cargo">Cargo</string>
+    <string name="telefono_trabajo">Telefono Trabajo</string>
+    <string name="telefono_particular">Telefono Particular</string>
+    <string name="telefono_movil">Telefono Movil</string>
+    <string name="numero_fax">Numero Fax</string>
+    <string name="direccion">Direccion</string>
+    <string name="ciudad">Ciudad</string>
+    <string name="estado">Estado</string>
+    <string name="codigo_postal">Codigo Postal</string>
+    <string name="apellidos">Apellidos</string>
 </resources>
